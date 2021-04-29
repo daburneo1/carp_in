@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #f3f3f3;
+    color: #000000;
+    font-family: sans-serif;
+}
+
+/*header*/
+#header{
+    width:100%;
+    height: 75px;
+    background-color: #fff;
+}
+
+#sub1{
+    width: 960px;
+    padding: 0 10px;
+    height: 75px;
+    margin: auto;
+    position:relative;
+    color: #ff0000;
+}
+
+#sub1 h1{
+    font-size: 15pt;
+    letter-spacing: 1px;
+    float:left;
+    padding-top: 25px;
+    color: #ff0000;
+}
+
+#sub1 h1 a b{
+    font-weight: 600;
+    font-family: "Courier New";
+}
+
+/*Menu*/
+#menu{
+    position:absolute; 
+    font-size:95%; 
+    margin-right:0;
+}
+
+#menu ul li{
+    float:left; 
+    display:inline;
+}
+
+#menu ul li a{
+    text-decoration:none; 
+    color:#101115; 
+    text-transform:uppercase; 
+    font-weight:300; 
+    letter-spacing:1px; 
+    display:block; 
+    padding:29px 40px 0 40px; 
+    height:46px; 
+    background-color:#fff;
+}
+
+#menu ul li a:hover{
+    background-color:#f3f3f3;
+}
+
+#menu ul li a.active{
+    background:none; 
+    color:#fff;
+}
+
+/*superior*/
+#superior{
+    width: 100%;
+    height: 465px;  
+}
+
+#superior1{
+    width: 960px;
+    margin: auto;
+}
+
+#superior1 h2{
+    padding-top:120px; 
+    padding-bottom:14px; 
+    font-size:280%; 
+    font-weight:200; 
+    text-align:center; 
+    color:#fff; 
+    text-shadow:0 1px #000
+}
+
+#superior1 p{
+    font-size:150%; 
+    font-weight:300; 
+    color:#bcbcbc; 
+    text-align:center; 
+    text-shadow:0 1px #000
+}
+
+#superior .boton1{
+    margin-top:60px;
+    text-align: center;
+    color: red;
+}
+
+/*contenedor*/
+.contenedor{
+    width: 90%;
+    max-width: 1980px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: "planta1 planta2 planta3"
+                            "servicio1 servicio2 servicio3"
+                            "sponsor sponsor sponsor"
+                            "footer footer footer";
+}
+
+.contenedor >section,
+.contenedor .footer{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .planta1,
+.contenedor .planta2,
+.contenedor .planta3{
+    background: #55a8fd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .servicio1,
+.contenedor .servicio2,
+.contenedor .servicio3{
+    background: #55a8fd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .planta1{
+    grid-area: planta1;
+}
+
+.contenedor .planta2{
+    grid-area: planta2;
+}
+
+.contenedor .planta3{
+    grid-area: planta3;
+}
+
+.contenedor .servicio1{
+    grid-area: servicio1;
+}
+
+.contenedor .servicio2{
+    grid-area: servicio2;
+}
+
+.contenedor .servicio3{
+    grid-area: servicio3;
+}
+
+.contenedor .sponsor{
+    grid-area: sponsor;
+}
+
+.contenedor .footer{
+    grid-area: footer;
+}
+
+@media screen and (max-width: 568px){
+    .contenedor{
+        grid-template-areas: "planta1 planta1 planta1"
+                            "planta2 planta2 planta2"
+                            "planta3 planta3 planta3"
+                            "servicio1 servicio1 servicio1"
+                            "servicio2 servicio2 servicio2"
+                            "servicio3 servicio3 servicio3"
+                            "sponsor sponsor sponsor"
+                            "footer footer footer";
+    }
+    
+}
